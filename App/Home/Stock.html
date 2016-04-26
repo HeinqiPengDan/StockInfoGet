@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+    <!--<script src="../../Scripts/jquery-1.9.1.js" type="text/javascript"></script>                         -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!--<script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!--<script src="../../Scripts/Office/1/office.js" type="text/javascript"></script> -->
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+    <link href="Stock.css" rel="stylesheet" type="text/css" />
+    <script src="Stock.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="content-header">
+      <div class="padding">
+        <h1>Stock Information Get</h1>
+      </div>
+    </div>
+    <div id="content-main">
+      <div class="padding" style="font-weight:bold;">
+      <table style="border-collapse:collapse;">
+        <tr>
+          <td>
+            <label for="stock_id">Stock ID:</label>
+          </td>
+          <td>
+            <input type="text" placeholder="Separated with comma" id="stock_id" />
+          </td>
+        </tr>
+        <!-- <br /> -->
+        <tr>
+          <td>
+            <label for="market">Market :</label>
+          </td>
+          <td>
+            <select id="market">
+              <option id="0">Chinese Mainland(CN)</option>
+              <option id="1">Hong Kong(HK)</option>
+              <option id="2">United States(US)</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+	  Display Columns:
+      <br />
+      <label name="lbl_column" for="column_show_all">
+      <input type="checkbox" id="column_show_all" name="column_show_all"
+      onclick=" javascript: checkAndUnCheckAll(this);" />All</label>
+      <br />
+      <label name="lbl_column" for="column_show_name">
+      <input type="checkbox" id="column_show_name" name="column_show" value="1" />Name</label>
+      <br />
+      <label name="lbl_column" for="column_show_code">
+      <input type="checkbox" id="column_show_code" name="column_show" value="1" />Code</label>
+      <br />
+      <label name="lbl_column" for="column_show_date">
+      <input type="checkbox" id="column_show_date" name="column_show" value="1" />Date</label>
+      <br />
+      <label name="lbl_column" for="column_show_time">
+      <input type="checkbox" id="column_show_time" name="column_show" value="1" />Time</label>
+      <br />
+      <label name="lbl_column" for="column_show_oprice">
+      <input type="checkbox" id="column_show_oprice" name="column_show" value="1" />OpenningPrice</label>
+      <br />
+      <label name="lbl_column" for="column_show_cprice">
+      <input type="checkbox" id="column_show_cprice" name="column_show" value="1" />ClosingPrice</label>
+      <br />
+      <label name="lbl_column" for="column_show_curprice">
+      <input type="checkbox" id="column_show_curprice" name="column_show" value="1" />CurrentPrice</label>
+      <br /></div>
+      <div style="margin:0 auto;width:200px;">
+        <input onmouseover="this.style.background='#17b9d2'" onmouseout="this.style.background=''" type="button" id="generate" value="Get" class="colorbuttonface" />
+      </div>
+    </div>
+  </body>
+</html>
